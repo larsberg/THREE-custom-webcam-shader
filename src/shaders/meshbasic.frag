@@ -25,7 +25,7 @@ uniform float opacity;
 #include <clipping_planes_pars_fragment>
 
 
-// CUSTOM uniforms
+// CUSTOM uiforms: we pass variables to the shader using 'uniform' values
 uniform float time;
 
 // CUSTOM hue shift function https://gist.github.com/mairod/a75e7b44f68110e1576d77419d608786#gistcomment-3195243
@@ -74,7 +74,15 @@ void main() {
 	gl_FragColor = vec4( outgoingLight, diffuseColor.a );
 
 	// CUSTOM
-	gl_FragColor.rgb = hueShift(gl_FragColor.rgb, time);
+	// float u = vUv.x;
+	// float u = vUv.y;
+	// float u = distance(vUv, vec2(0.5,0.5));
+	float u = sin((vUv.y - sin(time - vUv.x * PI * 10.0) * 0.05) * PI );
+
+	u = floor(u * 10.0 - time) / 10.0;
+	float hueOffset = time * 2.0 + u * PI * 2.0;
+	gl_FragColor.rgb = hueShift(gl_FragColor.rgb, hueOffset);
+
 
 
 	#include <tonemapping_fragment>

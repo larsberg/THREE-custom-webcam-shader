@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": " parcel src/index.html --open ",
-    "build": "parcel build src/index.html  --public-url='./' --out-dir build --no-source-maps --log-level 3 && npx serve build"
+    "build": "parcel build src/index.html  --public-url='./' --out-dir build --no-source-maps --log-level 3 && npx serve build",
+    "sublime": "open -a 'Sublime text' ."
   },
   "author": "your name here",
   "license": "ISC",
