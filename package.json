@@ -1,0 +1,14 @@
+{
+  "name": "webgl-webcam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": " parcel src/index.html --open "
+  },
+  "author": "your name here",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.115.0"
+  }
+}
