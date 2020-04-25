@@ -1,14 +1,14 @@
 # THREE.js webcam and custom material boiler plate
 
 
-
 ## Parcel
 This site uses the [Parcel](https://parceljs.org/) for development environment and it assumes that you have Parcel installed globally on your machine, [instructions here](https://parceljs.org/getting_started.html).
 
 
 ## Getting Started
+1. Fork this repo and clone it to your machine
 1. from your terminal, navigate to the project and run `npm install`
-2. to run the project use the 'dev' script found the package.json `npm run dev`.
+1. to run the project use the 'dev' script found the package.json `npm run dev`.
 
 
 ## Making a Custom Shader
