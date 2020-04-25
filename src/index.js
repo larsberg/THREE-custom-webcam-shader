@@ -41,6 +41,8 @@ var material = new CustomMaterial({
 	map: texture,
 	vertexShader: vertexShader,
 	fragmentShader: fragmentShader,
+
+	// we pass variables to the shader using 'uniform' values
 	uniforms: {
 		time: {value: 0},
 	}
@@ -81,7 +83,8 @@ if ( navigator.mediaDevices && navigator.mediaDevices.getUserMedia ) {
 
 // render loop
 function update() {
-	material.uniforms.time.value += clock.getElapsedTime() * 0.002;
+	// we pass variables to the shader using 'uniform' values
+	material.uniforms.time.value = clock.getElapsedTime() * 0.5;
 }
 
 function draw() {

@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": " parcel src/index.html --open "
+    "dev": " parcel src/index.html --open ",
+    "build": "parcel build src/index.html  --public-url='./' --out-dir build --no-source-maps --log-level 3 && npx serve build"
   },
   "author": "your name here",
   "license": "ISC",
   "dependencies": {
     "three": "^0.115.0"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "serve": "^11.3.0"
   }
 }
