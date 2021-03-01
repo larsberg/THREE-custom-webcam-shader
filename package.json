@@ -11,7 +11,7 @@
   "author": "your name here",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.115.0"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
